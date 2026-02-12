@@ -1,0 +1,54 @@
+{
+  "segments": [
+    {
+      "id": 1,
+      "file": "segment_001.gpx",
+      "distance_m": 315.81
+    },
+    {
+      "id": 2,
+      "file": "segment_002.gpx",
+      "distance_m": 287.94
+    },
+    {
+      "id": 3,
+      "file": "segment_003.gpx",
+      "distance_m": 246.03
+    },
+    {
+      "id": 4,
+      "file": "segment_004.gpx",
+      "distance_m": 287.94
+    },
+    {
+      "id": 5,
+      "file": "segment_005.gpx",
+      "distance_m": 315.81
+    },
+    {
+      "id": 6,
+      "file": "segment_006.gpx",
+      "distance_m": 0.0
+    },
+    {
+      "id": 7,
+      "file": "segment_007.gpx",
+      "distance_m": 0.0
+    },
+    {
+      "id": 8,
+      "file": "segment_008.gpx",
+      "distance_m": 0.0
+    },
+    {
+      "id": 9,
+      "file": "segment_009.gpx",
+      "distance_m": 0.0
+    },
+    {
+      "id": 10,
+      "file": "segment_010.gpx",
+      "distance_m": 0.0
+    }
+  ]
+}

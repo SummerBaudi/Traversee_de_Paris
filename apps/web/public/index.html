@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversée de Paris — Segments</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; background:#f7f7fb; color:#1f2937; }
+      header { background:#111827; color:white; padding:16px 20px; }
+      main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+      .card { background:white; border-radius:12px; padding:16px; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom:16px; }
+      .segments { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:12px; }
+      .segment { border:1px solid #e5e7eb; border-radius:10px; padding:12px; background:#fff; }
+      .tag { display:inline-block; font-size:12px; background:#e0f2fe; color:#075985; padding:4px 8px; border-radius:999px; }
+      a.btn { display:inline-block; margin-top:8px; padding:8px 10px; background:#2563eb; color:#fff; text-decoration:none; border-radius:8px; }
+      .muted { color:#6b7280; }
+      code { background:#f3f4f6; padding:2px 4px; border-radius:4px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Traversée de Paris — Sélection des segments (MVP démo)</h1>
+    </header>
+    <main>
+      <section class="card">
+        <p>Cette page charge le manifeste de segments depuis <code>/segments_manifest.json</code> et permet le téléchargement GPX.</p>
+        <p class="muted" id="meta">Chargement…</p>
+      </section>
+      <section id="segments" class="segments"></section>
+    </main>
+
+    <script>
+      async function loadSegments() {
+        const res = await fetch('/segments_manifest.json');
+        if (!res.ok) {
+          throw new Error('Impossible de charger segments_manifest.json');
+        }
+        const data = await res.json();
+        return data.segments || [];
+      }
+
+      function render(segments) {
+        const root = document.getElementById('segments');
+        const meta = document.getElementById('meta');
+        meta.textContent = `${segments.length} segments disponibles`;
+        root.innerHTML = '';
+
+        segments.forEach((segment) => {
+          const div = document.createElement('article');
+          div.className = 'segment';
+          div.innerHTML = `
+            <div class="tag">Segment #${segment.id}</div>
+            <h3>${segment.file}</h3>
+            <p class="muted">Distance estimée: ${segment.distance_m} m</p>
+            <a class="btn" href="/gpx/${segment.file}" download>Télécharger GPX</a>
+          `;
+          root.appendChild(div);
+        });
+      }
+
+      loadSegments().then(render).catch((err) => {
+        document.getElementById('meta').textContent = err.message;
+      });
+    </script>
+  </body>
+</html>

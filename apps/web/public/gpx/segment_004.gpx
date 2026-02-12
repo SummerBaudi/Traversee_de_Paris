@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Traversee_de_Paris" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>segment_004</name>
+    <trkseg>
+      <trkpt lat="48.859" lon="2.3565"></trkpt>
+      <trkpt lat="48.857" lon="2.354"></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
