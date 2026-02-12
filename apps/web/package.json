@@ -1,0 +1,9 @@
+{
+  "name": "@tdp/web",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 3000 --directory public",
+    "build": "echo 'build placeholder web'",
+    "lint": "node -e \"console.log('lint placeholder web')\""
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "edges": [
+    {
+      "id": 1,
+      "highway": "residential",
+      "length_m": 120.0,
+      "geometry": [[2.3500, 48.8560], [2.3510, 48.8562], [2.3520, 48.8563]]
+    },
+    {
+      "id": 2,
+      "highway": "footway",
+      "length_m": 90.0,
+      "geometry": [[2.3520, 48.8563], [2.3530, 48.8567], [2.3540, 48.8570]]
+    },
+    {
+      "id": 3,
+      "highway": "motorway",
+      "length_m": 500.0,
+      "geometry": [[2.3600, 48.8600], [2.3650, 48.8610]]
+    },
+    {
+      "id": 4,
+      "highway": "service",
+      "access": "private",
+      "length_m": 60.0,
+      "geometry": [[2.3540, 48.8570], [2.3550, 48.8571]]
+    },
+    {
+      "id": 5,
+      "highway": "steps",
+      "length_m": 30.0,
+      "geometry": [[2.3550, 48.8571], [2.3552, 48.8575]]
+    },
+    {
+      "id": 6,
+      "highway": "path",
+      "foot": "no",
+      "length_m": 85.0,
+      "geometry": [[2.3552, 48.8575], [2.3562, 48.8578]]
+    },
+    {
+      "id": 7,
+      "highway": "secondary",
+      "length_m": 220.0,
+      "geometry": [[2.3540, 48.8570], [2.3550, 48.8580], [2.3565, 48.8590]]
+    },
+    {
+      "id": 8,
+      "highway": "unclassified",
+      "length_m": 140.0,
+      "geometry": [[2.3565, 48.8590], [2.3575, 48.8592], [2.3580, 48.8595]]
+    }
+  ]
+}

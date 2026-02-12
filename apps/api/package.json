@@ -1,0 +1,10 @@
+{
+  "name": "@tdp/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "build": "echo 'build placeholder api'",
+    "lint": "node -e \"console.log('lint placeholder api')\""
+  }
+}
